@@ -2,6 +2,19 @@
 
 A Flutter application for efficient break management with Firebase backend integration.
 
+## How Break Time Works in Firebase
+
+- Break time is stored in Firebase in 24-hour format (for example, "19:00:00" means 7:00 PM).
+- You can change the break time in Firebase for testing—just update the start_time field in the breaks collection.
+- Our app uses this break time to manage break states:
+  - **Before break:** The app shows "Break will start soon."
+  - **During break:** The app shows "Break started."
+  - **When break is about to end:** The app shows "Break will end soon."
+  - **After break:** The app shows "Break ended."
+
+**In summary:**
+You can set any break time in Firebase (in 24-hour format) for testing. The app will automatically update the break status (start, end, will start soon, break over) based on the current time and the break time from the server.
+
 ## 📱 Screenshots
 
 <div align="center">
